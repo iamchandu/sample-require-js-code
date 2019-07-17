@@ -1,14 +1,19 @@
 console.log('a init started.')
 function alertMessage(){
       console.log('a trigered');
+      $('#aValue').html($('#aInput').val());
 }
 
-requirejs(["b","c"], function() {
+requirejs(["https://code.jquery.com/jquery-3.4.1.min.js"], function($) {
+      console.log('Jquery initialized.');
+});
+
+requirejs(["b","c"], function(b,c) {
       console.log('b init completed.');
       console.log('c init completed.');
 });
 
-requirejs(["d"], function() {
+requirejs(["d"], function(d) {
       console.log('d init completed.');
 });
 console.log('a init completed.');
