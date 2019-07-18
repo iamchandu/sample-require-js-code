@@ -1,10 +1,16 @@
-console.log('a init started.')
+requirejs.config({
+      paths: {
+          'jquery': 'https://code.jquery.com/jquery-3.4.1.min.js'
+      }
+  });
+
+console.log('a init started.');
 function alertMessage(){
       console.log('a trigered');
       $('#aValue').html($('#aInput').val());
 }
 
-requirejs(["https://code.jquery.com/jquery-3.4.1.min.js"], function($) {
+requirejs(["jquery"], function($) {
       console.log('Jquery initialized.');
 });
 

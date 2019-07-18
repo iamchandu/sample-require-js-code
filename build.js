@@ -1,8 +1,8 @@
 ({
-      baseUrl: "./code",
+      baseUrl: "./code/scripts",
       paths: {
-          jquery: "https://code.jquery.com/jquery-3.4.1.min.js"
+        jquery: "empty:"
       },
-      name: "scripts/a",
+      name: "a",
       out: "main-built.js"
   })
